@@ -5,7 +5,10 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -41,5 +44,13 @@ public class UrlCheckController {
         }
         return returnMessage;
     }
+
+    @GetMapping("/validate")
+    public String getValidateUrlStatusMessage(@RequestParam String url) {
+        
+        return url;
+    }
+
+    
 
 }
